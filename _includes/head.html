@@ -1,0 +1,506 @@
+<head>
+<meta charset="UTF-8" />
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="The KroonerZproject &raquo; Feed" href="/feed/" />
+
+<link rel='stylesheet' id='admin-bar-css'  href='/css/admin-bar.min.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-web-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic|Oswald:300,300italic,regular,italic,600,600italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-css'  href='/themes/pinboard/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='colorbox-css'  href='/themes/pinboard/styles/colorbox.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelementplayer-css'  href='/themes/pinboard/styles/mediaelementplayer.css' type='text/css' media='all' />
+<link rel='stylesheet' id='supersized-css'  href='/plugins/supersized/slideshow/css/supersized.css?ver=3.6' type='text/css' media='all' />
+	<!--[if lt IE 9]>
+	<script src="/themes/pinboard/scripts/html5.js" type="text/javascript"></script>
+	<![endif]-->
+<script type='text/javascript' src='http://p.jwpcdn.com/6/12/jwplayer.js?ver=3.6'></script>
+<script type='text/javascript' src='/themes/pinboard/scripts/ios-orientationchange-fix.js'></script>
+<script type='text/javascript' src='/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='/themes/pinboard/scripts/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/themes/pinboard/scripts/fitvids.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Download File":"Download File","Download Video":"Download Video","Play\/Pause":"Play\/Pause","Mute Toggle":"Mute Toggle","None":"None","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Unmute":"Unmute","Mute":"Mute","Captions\/Subtitles":"Captions\/Subtitles"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/js/mediaelement/mediaelement-and-player.min.js?ver=2.13.0'></script>
+<script type='text/javascript' src='/themes/pinboard/scripts/mediaelementplayer.js'></script>
+<script type='text/javascript' src='/plugins/supersized/slideshow/js/supersized.3.2.7.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+ 
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<script type="text/javascript">jwplayer.defaults = { "ph": 2 };</script>
+            <script type="text/javascript">
+            if (typeof(jwp6AddLoadEvent) == 'undefined') {
+                function jwp6AddLoadEvent(func) {
+                    var oldonload = window.onload;
+                    if (typeof window.onload != 'function') {
+                        window.onload = func;
+                    } else {
+                        window.onload = function() {
+                            if (oldonload) {
+                                oldonload();
+                            }
+                            func();
+                        }
+                    }
+                }
+            }
+            </script>
+
+            <style>
+/* ---------- TYPOGRAPHY ---------- */
+
+@font-face {
+	font-family: 'League Gothic';
+	src: url('/themes/pinboard/images/league_ghotic_extended-webfont.eot?') format('eot'),
+        url('/themes/pinboard/images/league_ghotic_extended-webfont.woff') format('woff'),
+        url('/themes/pinboard/images/league_ghotic_extended-webfont.ttf') format('truetype'),
+        url('/themes/pinboard/images/league_ghotic_extended-webfont.svg#webfontJks7As9d') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+</style>
+<script>
+
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+$.supersized({
+		
+			//Functionality
+			slideshow               :   1,		//Slideshow on/off
+			autoplay				:	1,		//Slideshow starts playing automatically
+			start_slide             :   1,		//Start slide (0 is random)
+			random					: 	0,		//Randomize slide order (Ignores start slide)
+			slide_interval          :   5000,	//Length between transitions
+			transition              :   1, 		//0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+			transition_speed		:	1000,	//Speed of transition
+			new_window				:	1,		//Image links open in new window/tab
+			pause_hover             :   0,		//Pause slideshow on hover
+			keyboard_nav            :   1,		//Keyboard navigation on/off
+			performance				:	1,		//0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+			image_protect			:	1,		//Disables image dragging and right click with Javascript
+			image_path				:	'', //Default image path
+
+			//Size & Position
+			min_width		        :   0,		//Min width allowed (in pixels)
+			min_height		        :   0,		//Min height allowed (in pixels)
+			vertical_center         :   1,		//Vertically center background
+			horizontal_center       :   1,		//Horizontally center background
+			fit_portrait         	:   0,		//Portrait images will not exceed browser height
+			fit_landscape			:   0,		//Landscape images will not exceed browser width
+			
+			//Components
+			navigation              :   0,		//Slideshow controls on/off
+			thumbnail_navigation    :   0,		//Thumbnail navigation
+			slide_counter           :   0,		//Display slide numbers
+			slide_captions          :   0,		//Slide caption (Pull from "title" in slides array)
+			slides 					:  	[		//Slideshow Images
+											{image : "/uploads/2013/10/kz_web_bannr_12_10_13_b1.jpg" }										]
+										
+		});
+		$('#access .menu > li > a').each(function() {
+			var title = $(this).attr('title');
+			if(typeof title !== 'undefined' && title !== false) {
+				$(this).append('<br /> <span>'+title+'</span>');
+				$(this).removeAttr('title');
+			}
+		});
+		function pinboard_move_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-container', container).before(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-container', container).before(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-container', container).before(gallery);
+				//var meta = $('.entry-meta', container);
+				//if('undefined' !== typeof meta)
+					//$('.entry-container', container).after(meta);
+			}
+		}
+		function pinboard_restore_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-header', container).after(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-header', container).after(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-header', container).after(gallery);
+				//var meta = $('.entry-meta', container);
+				//if('undefined' !== typeof meta)
+					//$('.entry-header', container).append(meta);
+				//else
+					//$('.entry-header', container).html(meta.html());
+			}
+		}
+		if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+			// Viewport is greater than tablet: portrait
+		} else {
+			$('#content .post').each(function() {
+				pinboard_move_elements($(this));
+			});
+		}
+		$(window).resize(function() {
+			if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+									$('.page-template-template-full-width-php #content .post, .page-template-template-blog-full-width-php #content .post, .page-template-template-blog-four-col-php #content .post').each(function() {
+						pinboard_restore_elements($(this));
+					});
+							} else {
+				$('#content .post').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					if(parseInt($(this).css('height'))>maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+			} else {
+				$('#access .menu > li > a').css('height', 'auto');
+			}
+		});
+		if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+			var maxh = 0;
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if(typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>'+title+'</span>');
+					$(this).removeAttr('title');
+				}
+				if(parseInt($(this).css('height'))>maxh) {
+					maxh = parseInt($(this).css('height'));
+				}
+			});
+			$('#access .menu > li > a').css('height', maxh);
+							$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+					} else {
+			$('#access li').each(function() {
+				if($(this).children('ul').length)
+					$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow"></span></span>');
+			});
+			$('.drop-down-toggle').click(function() {
+				$(this).parent().children('ul').slideToggle(250);
+			});
+		}
+						$('audio,video').mediaelementplayer({
+			videoWidth: '100%',
+			videoHeight: '100%',
+			audioWidth: '100%',
+			alwaysShowControls: true,
+			features: ['playpause','progress','tracks','volume'],
+			videoVolume: 'horizontal'
+		});
+		$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe, object, embed"});
+	});
+	jQuery(window).load(function() {
+					jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+			});
+/* ]]> */
+</script>
+<style type="text/css">
+							#wrapper {
+			background: #0c0c0c;
+		}
+				#header {
+			border-color: #1c1c1b;
+		}
+		#access {
+			background: #1c1c1b;
+		}
+				#access li li {
+			background: #1c1c1b;
+		}
+					.entry,
+		#comments,
+		#respond,
+		#posts-nav {
+			background: #0c0c0c;
+		}
+				.home .entry-meta,
+		.blog .entry-meta,
+		.archive .entry-meta,
+		.search .entry-meta {
+			background: #000000;
+		}
+				#footer-area {
+			background: #1c1c1b;
+		}
+				#copyright {
+			background: #1c1c1b;
+		}
+											h1,
+		.single .entry-title,
+		.page .entry-title,
+		.error404 .entry-title {
+			font-size:50.00px;
+			line-height:1.62em;
+		}
+								.entry-content {
+			font-size:16.00px;
+			line-height:1.62em;
+		}
+		@media screen and (max-width: 640px) {
+			.entry-content {
+				font-size:17.00px;
+				line-height:1.62em;
+			}
+		}
+				body {
+			color:#0c0c0c;
+		}
+		h1, h2, h3, h4, h5, h6,
+		.entry-title,
+		.entry-title a {
+			color:#0c0c0c;
+		}
+		.entry-content {
+			color:#0c0c0c;
+		}
+				a {
+			color:#ffffff;
+		}
+				a:hover {
+			color:#ffffff;
+		}
+				#access a {
+			color:#cccccc;
+		}
+				#access a:hover,
+		#access li.current_page_item > a {
+			color:#FFF;
+		}
+						.widget-area a {
+			color:#ffffff;
+		}
+						a.social-media-icon:hover {}
+.entry-meta a{color: #fff;}
+#wrapper {        
+        box-shadow: none;
+        background: none;
+}
+/*#social-media-icons {
+background-image: url(wp-content/uploads/2013/08/alpha.png);
+margin-top: 8%;
+overflow: hidden;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+padding: 10px 2px 9px 10px;
+margin-right: 10px;
+}*/
+#header{border-top: none;}
+#supersized {
+position: fixed;
+left: 0;
+top: 0;
+overflow: hidden;
+z-index: -999;
+height: 100%;
+width: 100%;
+}
+#supersized img{
+display: inline;
+width: auto;
+height: auto;
+position: relative;
+display: none;
+outline: none;
+border: none;
+}
+
+.entry, #comments, #respond, #access,#footer{
+box-shadow: 5px #0c0c0c;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px; /* future proofing */
+-khtml-border-radius: 5px; /* for old Konqueror browsers */}
+
+/*.onecol .hentry .entry, .onecol .hentry #comments, .onecol .hentry #respond, .category-filter{
+margin: 1.7% 0;
+}*/
+.onecol .hentry .entry, .onecol .hentry #comments, .onecol .hentry #respond, .category-filter{margin: 1.7% 0;}
+#container {margin: 1.6% 0;}
+
+a.social-media-icon{
+display: block;
+height: 38px;
+float: left;
+margin: 0 10px 10px 0;
+overflow: hidden;
+background-position:0;
+width: 38px;}
+#social-media-icons{
+margin-top: 13%;
+}
+.tagClass{
+margin-left: 5px;
+font-size: 20px;
+
+}
+.entry-title, #comments-title, #reply-title{
+text-transform: uppercase;
+font-weight: 400;
+font-size:30px;
+font-family: League Gothic, Arial, san-serif;
+}
+
+.page-template-template-full-width-php .hentry.onecol .entry-summary, .page-template-template-blog-full-width-php .hentry.onecol .entry-summary, .page-template-template-blog-four-col-php .hentry.onecol .entry-summary, .page-template-template-full-width-php .hentry.onecol .entry-thumbnail, .page-template-template-blog-full-width-php .hentry.onecol .entry-thumbnail, .page-template-template-blog-four-col-php .hentry.onecol .entry-thumbnail{
+float: left;
+width: 27.6%;
+}
+.entry-summary p {
+font-family: Arial;}
+.dribble{
+width: 40px !important;}
+.entry, #comments, #respond, #posts-nav{
+background-color: rgba(0,0,0,0.3);
+}
+/*.entry, #comments, #respond{background:none;box-shadow:none;}*/
+.entry-attachment iframe, .fluid-width-video-wrapper iframe {
+    border:5px solid #1c1c1b;
+    border-radius: 5px !important;
+}
+.home .entry-meta, .blog .entry-meta, .archive .entry-meta, .search .entry-meta{ background-color: #1c1c1b;}
+
+.page-template-template-full-width-php .hentry.onecol .wp-post-image, .page-template-template-full-width-php .hentry.onecol .entry-attachment, .page-template-template-full-width-php .hentry.onecol .post-gallery
+{
+margin-bottom: 0;}
+.entry-attachment{
+margin-top: 10px;
+}
+#access a{
+font-family:Arial, Verdana, sans-serif;
+font-size: 90%;}
+#site-title{margin:0;}
+.entry-content{font-family:Arial, Verdana, sans-serif;
+}
+.entry-content strong {
+text-transform: uppercase;
+}
+.entry-content hr{
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.entry-content hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.entry-content .right{
+margin-left: 29%;}
+.entry-title a:hover{
+color: #fff;
+}
+.onecol .onecol .entry-summary, .entry-content{
+  font-size: 16px;
+}
+footer.post-meta{
+background: #1c1c1b;}
+.single .entry-meta{
+border-top: #1c1c1b 1px solid;
+border-bottom: #1c1c1b 1px solid;
+}
+.entry-utility{
+border-top: #1c1c1b 1px solid;
+}
+
+.social-bookmarks p{
+font-size: 14px;
+}
+
+#site-title{
+margin: 0 0 -2%;
+}
+.entry-summary p{margin-top : 0;}
+.onecol .onecol .entry-summary{
+border: 1px solid black;
+background-color: black;
+color: #ccc;
+border-radius: 9px;
+padding: 0.5%;
+}
+
+.entry-content div.infoexcept{
+border: 1px solid black;
+background-color: black;
+color: #ccc;
+border-radius: 9px;
+padding: 0.5%;
+margin-bottom: 1%;
+}
+
+.fb_iframe_widget span{
+display:inline !important;
+background-color: #333 !important;
+}
+.fb_iframe_widget{
+margin: 0 0 -10% 53% !important;
+}
+
+.pluginConnectTextDark, .fbDarkWidget .uiStreamRedesign .uiStreamMessage .messageBody, .pluginSkinDark .uiStreamRedesign .uiStreamMessage .messageBody{
+color: #fff !important;
+}
+
+.facebookOuter {
+    background-color:#333; 
+    width:250px; 
+    padding:10px 0 10px 10px;
+    height:250px;
+    border:1px solid #CCCCCC;
+  }
+.facebookInner {
+    height:250px;
+    overflow:hidden;
+  }</style>
+<!-- Vipers Video Quicktags v6.4.5 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+<style type="text/css">
+	#site-title .home,
+	#site-description {
+		position:absolute !important;
+		clip:rect(1px, 1px, 1px, 1px);
+	}
+</style>
+<meta property="og:site_name" content="http://thekroonerzproject.com/"/>
+<meta property="og:type" content="video"/>
+
+</head>
